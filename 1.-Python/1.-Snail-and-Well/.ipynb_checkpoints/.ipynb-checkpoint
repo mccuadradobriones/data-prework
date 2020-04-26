@@ -30,7 +30,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 10,
+   "execution_count": 2,
    "metadata": {},
    "outputs": [],
    "source": [
@@ -49,7 +49,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 11,
+   "execution_count": null,
    "metadata": {},
    "outputs": [],
    "source": [
@@ -65,12 +65,13 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 12,
+   "execution_count": null,
    "metadata": {},
    "outputs": [],
    "source": [
     "while Snail_position<well_height: \n",
-    "    Snail_position +=1\n"
+    "    Snail_position +=1\n",
+    "print (days)"
    ]
   },
   {
@@ -82,19 +83,11 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 13,
+   "execution_count": null,
    "metadata": {},
-   "outputs": [
-    {
-     "name": "stdout",
-     "output_type": "stream",
-     "text": [
-      "10 days\n"
-     ]
-    }
-   ],
+   "outputs": [],
    "source": [
-    "print (days,\"days\")"
+    "print(days,\"días\")"
    ]
   },
   {
@@ -116,20 +109,11 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 36,
+   "execution_count": null,
    "metadata": {
     "scrolled": true
    },
-   "outputs": [
-    {
-     "name": "stdout",
-     "output_type": "stream",
-     "text": [
-      "[10, 1, 13, 57, 24, 25, 3, 25, -8, 14, 35]\n",
-      "5 days\n"
-     ]
-    }
-   ],
+   "outputs": [],
    "source": [
     "well_height=125\n",
     "nightly_distance=-20\n",
@@ -143,8 +127,7 @@
     "    snail_position+=i\n",
     "    if snail_position<= well_height:\n",
     "      days.append(snail_position)\n",
-    "print(len(days),\"days\")\n",
-    "\n"
+    "print(len(days))\n"
    ]
   },
   {
@@ -157,23 +140,14 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 37,
+   "execution_count": null,
    "metadata": {},
-   "outputs": [
-    {
-     "name": "stdout",
-     "output_type": "stream",
-     "text": [
-      "maximum 57\n",
-      "minimum -8\n"
-     ]
-    }
-   ],
+   "outputs": [],
    "source": [
-    "maximum=max(distance)\n",
-    "print(\"maximum\",maximum)\n",
-    "minimum=min(distance)\n",
-    "print(\"minimum\",minimum)"
+    "maximum_disp=max(advance_cm)\n",
+    "print(maximum_disp)\n",
+    "minimum_disp=min(advance_cm)\n",
+    "print(minimum_disp)"
    ]
   },
   {
@@ -185,22 +159,18 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 38,
+   "execution_count": null,
    "metadata": {},
-   "outputs": [
-    {
-     "name": "stdout",
-     "output_type": "stream",
-     "text": [
-      "average progress 18.09090909090909\n"
-     ]
-    }
-   ],
+   "outputs": [],
    "source": [
-    "progress=sum(distance)\n",
-    "lenght=len(distance)\n",
-    "average=progress/lenght\n",
-    "print(\"average progress\",average)\n"
+    "advance_cm = [30, 21, 33, 77, 44, 45, 23, 45, 12, 34, 55]\n",
+    "total_avance=(sum(advance_cm))\n",
+    "print(total_avance)\n",
+    "longitud=(len(advance_cm))\n",
+    "print(longitud)\n",
+    "total_retroceso=longitud*nightly_distance\n",
+    "media=((total+total_retroceso)//longitud)\n",
+    "print(media)"
    ]
   },
   {
@@ -212,21 +182,20 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 40,
+   "execution_count": null,
    "metadata": {},
-   "outputs": [
-    {
-     "name": "stdout",
-     "output_type": "stream",
-     "text": [
-      "standard_deviation 17.159437082600803\n"
-     ]
-    }
-   ],
+   "outputs": [],
    "source": [
-    "standard_deviation=((sum([((y-average)**2) for y in distance]))/lenght)**(1/2)\n",
-    "print(\"standard_deviation\",standard_deviation)"
+    "Standard_dev=((sum([((x-media)**2) for x in distance]) /longitud))**(1/2)\n",
+    "print(Standard_dev)"
    ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
   }
  ],
  "metadata": {
